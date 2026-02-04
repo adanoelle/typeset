@@ -1,0 +1,28 @@
+# LaTeX artifacts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+
+# Typst artifacts (minimal - Typst is clean)
+# None needed typically
+
+# Editor
+*.swp
+*~
+.direnv/
+
+# OS
+.DS_Store
