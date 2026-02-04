@@ -28,6 +28,7 @@
             pkgs.tinymist         # LSP
 
             # Tools
+            pkgs.git              # Version control
             pkgs.sioyek           # PDF viewer
             pkgs.just             # Task runner
           ];
