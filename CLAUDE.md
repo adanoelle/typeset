@@ -26,6 +26,7 @@ just clean          # Remove target/
 ## Environment
 
 Requires `nix develop` or direnv. Provides:
+
 - LaTeX: texlive (scheme-full), latexmk, texlab (LSP)
 - Typst: typst, tinymist (LSP)
 - Tools: git, sioyek (PDF viewer), just
