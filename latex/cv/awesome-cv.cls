@@ -236,7 +236,7 @@
 \newcommand*{\entrypositionstyle}[1]{{\fontsize{8pt}{1em}\bodyfont\scshape\color{graytext} #1}}
 \newcommand*{\entrydatestyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
 \newcommand*{\entrylocationstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
-\newcommand*{\descriptionstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text} #1}}
+\newcommand*{\descriptionstyle}[1]{{\fontsize{8.5pt}{1.15em}\bodyfontlight\upshape\color{text} #1}}
 
 % For elements of subentry
 \newcommand*{\subentrytitlestyle}[1]{{\fontsize{8pt}{1em}\bodyfont\mdseries\color{graytext} #1}}
@@ -604,9 +604,12 @@
 \newenvironment{cvitems}{
   \vspace{-4mm}
   \begin{justify}
-  \begin{itemize}[leftmargin=2ex, nosep, noitemsep]
+  \begin{itemize}[leftmargin=2ex, rightmargin=1.5cm, nosep, itemsep=2pt]
     \setlength{\parskip}{0pt}
     \renewcommand{\labelitemi}{\bullet}
+    \hyphenpenalty=10000
+    \exhyphenpenalty=10000
+    \tolerance=2000
 }{
   \end{itemize}
   \end{justify}
@@ -619,6 +622,9 @@
 % Define an environment for cvletter
 \newenvironment{cvletter}{
   \lettertextstyle
+  \hyphenpenalty=10000
+  \exhyphenpenalty=10000
+  \tolerance=2000
 }{
 }
 
@@ -646,7 +652,7 @@
   \end{singlespace}
   \ifthenelse{\isundefined{\@lettertitle}}
     {}
-    {\lettertitlestyle{\@lettertitle} \\}
+    {\lettertitlestyle{\@lettertitle}\vspace{4mm}\\}
   \lettertextstyle{\@letteropening} 
 }
 
